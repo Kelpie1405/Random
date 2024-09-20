@@ -1,17 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GoogleMapController;
+use App\Http\Controllers\MapController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::prefix('/google-map')->controller(GoogleMapController::class)->group(function () {
-//     Route::get('', 'index');
-//     Route::get('/map', 'map');
-//     Route::get('/route1', 'route1');
-//     Route::get('/route2', 'route2');
-// });
-
-Route::get('/route', [GoogleMapController::class, 'index']);
+Route::get('/map', [MapController::class, 'index']);
