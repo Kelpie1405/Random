@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/map', [MapController::class, 'index']);
+Route::get('/map/post/create', [MapController::class, 'create']);
+Route::post('/map/post', [MapController::class, 'store']);
