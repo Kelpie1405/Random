@@ -37,4 +37,9 @@ class GoogleMapController extends Controller
     {
         return view('GoogleMap.route2', ['api_key' => $this->api_key]);
     }
+
+    public function running()
+    {
+        return view('GoogleMap.running', ['api_key' => $this->api_key]);
+    }
 }
